@@ -1,21 +1,43 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './style/App.css';
+import MovieList from './components/MovieList'
+import Input from './components/Input';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      inputValue: "",
+      inputAuthor:""
+    }
+    this.changeTitle = this.changeTitle.bind(this)
+    this.changeAuthor = this.changeAuthor.bind(this)
+  }
+
+  changeTitle(value){
+    this.setState({inputValue : value})
+  }
+ changeAuthor(value){
+    this.setState({inputAuthor : value})
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Input 
+        value={this.changeTitle}
+        placeholder="Chercher par titre" />
+
+        <MovieList
+        titleMovie={this.state.inputValue}
+        authorMovie={this.state.inputAuthor}
+         />
+        
+        
       </div>
     );
+    }
   }
-}
 
 export default App;

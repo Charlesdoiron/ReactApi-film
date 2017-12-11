@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #ff3680;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.movie__title{
+	color: #FFF;
+	font-size: 3rem;
+}
+.movie__desc{
+  color: #FFF;
+  max-width: 50%;
+}
+input[type="text"] {
+    background-color: #FFF;
+    color: #ff3680;
+    text-transform: uppercase;
+    border: 1px solid #ffffff1c;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.movie__content{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.movie__desc{
+	text-align: left;
+}
